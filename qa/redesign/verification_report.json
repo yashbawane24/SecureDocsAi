@@ -1,0 +1,225 @@
+{
+  "checks": [
+    {
+      "label": "landing_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "login_admin_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "login_head_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "login_manager_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "login_employee_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "open_link_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "landing_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "login_admin_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "login_head_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "login_manager_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "login_employee_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "open_link_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "dashboard_meera_owner_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "documents_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "document_detail_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "approvals_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "audit_log_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "members_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "settings_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "secure_viewer_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "dashboard_meera_owner_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "dashboard_ananya_head_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "dashboard_ananya_head_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "dashboard_karthik_manager_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "dashboard_karthik_manager_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "dashboard_divya_employee_1440",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    },
+    {
+      "label": "dashboard_divya_employee_390",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflow": false,
+      "greenLeakCount": 0
+    }
+  ],
+  "role_redirect_test": {
+    "passed": true,
+    "mismatch_text": "This is a Manager account. Use Manager sign-in.\nGo to Manager sign-in",
+    "redirected_url": "http://localhost:5173/login/manager?email=karthik%40northwind.test",
+    "prefilled_email": "karthik@northwind.test"
+  },
+  "console_errors": [
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[1440] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "[390] Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ]
+}

@@ -1,0 +1,86 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ledger_vault_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ledger_admin
+      POSTGRES_PASSWORD: VaultSecurePassword2026!
+      POSTGRES_DB: ledger_vault
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ledger_admin -d ledger_vault"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: ledger_vault_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: ledger_vault_mailpit
+    restart: unless-stopped
+    ports:
+      - "8025:8025" # Web UI for inspecting OTP codes
+      - "1025:1025" # SMTP port
+    environment:
+      MP_MAX_MESSAGES: 500
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ledger_vault_backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+    ports:
+      - "8000:8000"
+    environment:
+      ENV: "development"
+      DATABASE_URL: "postgresql+asyncpg://ledger_admin:VaultSecurePassword2026!@postgres:5432/ledger_vault"
+      REDIS_URL: "redis://redis:6379/0"
+      STORAGE_DIR: "/app/vault_storage"
+      FRONTEND_URL: "http://localhost:5173"
+      SECRET_KEY: "institutional-secret-key-prod-0123456789abcdef"
+      AES_SECRET_KEY: "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+      SMTP_HOST: "mailpit"
+      SMTP_PORT: 1025
+      SMTP_FROM: "security@ledger-vault.internal"
+      TURNSTILE_SECRET_KEY: "1x0000000000000000000000000000000AA"
+      TURNSTILE_SITE_KEY: "1x00000000000000000000AA"
+    volumes:
+      - vault_storage:/app/vault_storage
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ledger_vault_frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  vault_storage:

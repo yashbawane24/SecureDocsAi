@@ -1,0 +1,149 @@
+:root {
+  /* Fonts */
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Core Surfaces & Backgrounds */
+  --bg: #F1F1F0;
+  --landing-bg: #F1F1F0;
+  --panel: #F8F8F7;
+  --surface: #FFFFFF;
+  --line: #E6E6E3;
+
+  /* Ink / Text */
+  --ink: #141517;
+  --ink2: #5F6166;
+  --ink3: #8E9095;
+
+  /* Graphite Dark Surfaces */
+  --graphite: #151618;
+  --graphite-2: #1F2023;
+  --graphite-border: #2A2B2F;
+
+  /* Legacy mappings mapped to graphite */
+  --navy: #151618;
+  --navy-2: #1F2023;
+  --cyan: #2F5BEA;
+
+  /* Text on Dark / Graphite */
+  --dark-heading: #F2F2F3;
+  --dark-text: #A1A3A8;
+  --dark-muted: #6E7076;
+  --navy-text: #A1A3A8;
+  --navy-muted: #6E7076;
+  --navy-group: #6E7076;
+
+  /* ONE Blue Accent */
+  --accent: #2F5BEA;
+  --accent-hover: #2449C6;
+  --accent-soft: #EBF0FD;
+  --accent-ink: #FFFFFF;
+
+  /* Neutral Ice Card (Risk overview is now a white card) */
+  --ice: #FFFFFF;
+  --ice-border: #E6E6E3;
+
+  /* Charts */
+  --chart-views: #E3E4E8;
+  --chart-downloads: #2F5BEA;
+  --chart-selected: #151618;
+
+  /* Risk Levels (Unchanged: Low is the ONLY place green is used) */
+  --risk-low-fg: #1F8A5B;
+  --risk-low-bg: #E3F3EA;
+  --risk-medium-fg: #B7791F;
+  --risk-medium-bg: #FBF1DE;
+  --risk-high-fg: #C2571A;
+  --risk-high-bg: #FDEEE4;
+  --risk-critical-fg: #B42318;
+  --risk-critical-bg: #FDECEA;
+
+  /* Danger Tint Card */
+  --danger-card-bg: #FFF6F4;
+  --danger-card-border: #F6D6D1;
+
+  /* Status tokens */
+  --success: #1F8A5B;
+  --success-bg: #E3F3EA;
+  --warning: #B7791F;
+  --warning-bg: #FBF1DE;
+  --danger: #B42318;
+  --danger-bg: #FDECEA;
+  --info: #2F5BEA;
+  --info-bg: #EBF0FD;
+
+  /* Legacy alias variables mapped to graphite + blue */
+  --background: var(--panel);
+  --paper: var(--panel);
+  --border: var(--line);
+  --rule: var(--line);
+  --text: var(--ink);
+  --ink-2: var(--ink2);
+  --muted: var(--ink2);
+  --status-success: var(--success);
+  --status-success-bg: var(--success-bg);
+  --status-warning: var(--warning);
+  --status-warning-bg: var(--warning-bg);
+  --status-danger: var(--danger);
+  --status-danger-bg: var(--danger-bg);
+
+  /* Radii & Spacing (Global 20px gap, 24px card padding) */
+  --radius-card: 20px;
+  --radius-panel: 24px;
+  --radius-hero: 32px;
+  --radius-btn: 12px;
+  --radius-pill: 999px;
+  --gap-global: 20px;
+  --pad-card: 24px;
+  --shadow-card: none;
+  --shadow-flyout: 0 16px 40px rgba(21, 22, 24, 0.12);
+}
+
+[data-theme="dark"] {
+  --bg: #0B0B0C;
+  --landing-bg: #0B0B0C;
+  --panel: #0F1011;
+  --surface: #17181A;
+  --line: #26272A;
+  --ink: #EDEDEE;
+  --ink2: #9C9EA3;
+  --ink3: #6E7076;
+
+  --graphite: #151618;
+  --graphite-2: #1F2023;
+  --graphite-border: #2A2B2F;
+
+  --navy: #151618;
+  --navy-2: #1F2023;
+  --cyan: #2F5BEA;
+
+  --ice: #17181A;
+  --ice-border: #26272A;
+  --danger-card-bg: #26161B;
+  --danger-card-border: #4A2328;
+
+  --accent: #2F5BEA;
+  --accent-hover: #2449C6;
+  --accent-soft: rgba(47, 91, 234, 0.15);
+
+  --chart-views: #26272A;
+  --chart-downloads: #2F5BEA;
+  --chart-selected: #EDEDEE;
+
+  --risk-low-fg: #4ADE80;
+  --risk-low-bg: rgba(31, 138, 91, 0.22);
+  --risk-medium-fg: #FBBF24;
+  --risk-medium-bg: rgba(183, 121, 31, 0.22);
+  --risk-high-fg: #FB923C;
+  --risk-high-bg: rgba(194, 87, 26, 0.22);
+  --risk-critical-fg: #F87171;
+  --risk-critical-bg: rgba(180, 35, 24, 0.24);
+
+  --background: var(--panel);
+  --paper: var(--panel);
+  --border: var(--line);
+  --rule: var(--line);
+  --text: var(--ink);
+  --ink-2: var(--ink2);
+  --muted: var(--ink2);
+}
